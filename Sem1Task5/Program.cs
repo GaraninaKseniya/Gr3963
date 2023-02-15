@@ -9,10 +9,19 @@ if (lineNum != null)
   int num = int.Parse(lineNum);
   string res = string.Empty;
   int negNum = num * (-1);
+  
   while (negNum <= num)
   {
     res = res + negNum + "\t";
     negNum++;
   }
+  
+// while (negNum < num)
+//   {
+//     res = res + negNum + ", ";
+//     negNum++;
+//   }
+//   res = res + num;
+ 
   Console.WriteLine(res);
 }
