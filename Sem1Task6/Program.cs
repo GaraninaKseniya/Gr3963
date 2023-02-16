@@ -3,17 +3,12 @@
 // является ли число чётным (делится ли оно на два без остатка).
 
 Console.Write("Введите число: ");
-string? numLine = Console.ReadLine();
-if (numLine != null)
+int num = Convert.ToInt32(Console.ReadLine());
+if (num % 2 == 0)
 {
-  double num = int.Parse(numLine);
-  double result = num / 2;
-  if (result % 2 == 0)
-  {
-    Console.WriteLine("число четное");
-  }
-  else
-  {
-    Console.WriteLine("число нечетное");
-  }
+  Console.WriteLine("число четное");
+}
+else
+{
+  Console.WriteLine("число нечетное");
 }
