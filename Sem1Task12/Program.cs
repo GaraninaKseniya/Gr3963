@@ -10,9 +10,9 @@ int secondNum = int.Parse(Console.ReadLine() ?? "0");
 int rem = firstNum % secondNum;
 if (rem == 0)
 {
-  Console.WriteLine("кратно");
+  Console.WriteLine($"Число {firstNum} кратно {secondNum}");
 }
 else
 {
-  Console.WriteLine("не кратно, остаток "+rem);
+  Console.WriteLine($"Не кратно, остаток от деления {firstNum} на {secondNum} = {rem}");
 }
