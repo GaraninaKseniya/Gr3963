@@ -11,3 +11,6 @@ Console.WriteLine(rndNumber);
 // int num = firstNum*10 + lastNum;
 // Console.WriteLine(num);
 Console.WriteLine(rndNumber / 100 * 10 + rndNumber % 10);
+// вариант 2
+char[] digits = rndNumber.ToString().ToCharArray();
+Console.WriteLine(int.Parse((digits[0]).ToString())*10+int.Parse((digits[2]).ToString()));
