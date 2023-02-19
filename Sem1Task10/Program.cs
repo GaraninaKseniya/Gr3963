@@ -4,9 +4,9 @@
 
 Console.Write("Введите трёхзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-// вариант 1
 if (num >= 100 && num < 1000)
 {
+  // вариант 1
   int num2 = num / 10 % 10;
   Console.WriteLine($"Вторая цифра введенного числа: {num2}");
   // вариант 2
