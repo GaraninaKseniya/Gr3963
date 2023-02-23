@@ -28,3 +28,14 @@ else
 {
   Console.WriteLine("Третьей цифры нет.");
 }
+
+// Console.Write("Введите число: ");
+// char[] array = Console.ReadLine().ToString().ToCharArray();
+// if (array.Length > 2)
+// {
+//   Console.WriteLine($"Третья цифра введенного числа: {int.Parse((array[2]).ToString())}");
+// }
+// else 
+// {
+//   Console.WriteLine("Третьей цифры нет.");
+// }
