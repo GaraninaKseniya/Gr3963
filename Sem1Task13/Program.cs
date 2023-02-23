@@ -2,18 +2,6 @@
 // Напишите программу, которая выводит третью цифру 
 // заданного числа или сообщает, что третьей цифры нет.
 
-// Console.Write("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// char[] array = num.ToString().ToCharArray();
-// if (num > 99)
-// {
-//   Console.WriteLine($"Третья цифра введенного числа: {int.Parse((array[2]).ToString())}");
-// }
-// else 
-// {
-//   Console.WriteLine("Третьей цифры нет.");
-// }
-
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num > 99)
@@ -29,13 +17,13 @@ else
   Console.WriteLine("Третьей цифры нет.");
 }
 
-// Console.Write("Введите число: ");
-// char[] array = Console.ReadLine().ToString().ToCharArray();
-// if (array.Length > 2)
-// {
-//   Console.WriteLine($"Третья цифра введенного числа: {int.Parse((array[2]).ToString())}");
-// }
-// else 
-// {
-//   Console.WriteLine("Третьей цифры нет.");
-// }
+Console.Write("Введите число: ");
+char[] array = (Console.ReadLine() ??"0").ToString().ToCharArray();
+if (array.Length > 2)
+{
+  Console.WriteLine($"Третья цифра введенного числа: {int.Parse((array[2]).ToString())}");
+}
+else 
+{
+  Console.WriteLine("Третьей цифры нет.");
+}
