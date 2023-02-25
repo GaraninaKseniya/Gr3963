@@ -25,5 +25,25 @@ bool PalinTest(int num)
   return res;
 }
 
+// void PalinTest(int num)
+// {
+//   char[] array = (Console.ReadLine() ?? "0").ToString().ToCharArray();
+//   if (array.Length == 5)
+//   {
+//     if ((num / 10000 % 10 == num % 10) && (num / 1000 % 10 == num / 10 % 10))
+//     {
+//       Console.WriteLine("Введенное число является палиндромом");
+//     }
+//     else
+//     {
+//       Console.WriteLine("Введенное число не является палиндромом");
+//     }
+//   }
+//   else
+//   {
+//    Console.WriteLine("Введено не пятизначное число"); 
+//   }
+// }
+
 int num = ReadData("Введите пятизначное число: ");
 PalinTest(num);
