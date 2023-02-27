@@ -10,20 +10,20 @@ int ReadData(string msg)
   return int.Parse(Console.ReadLine() ?? "0");
 }
 // метод читает данные от пользователя (символ)
-string ReadSign(string msg)
+char ReadSign(string msg)
 {
     Console.WriteLine(msg);
-    return Convert.ToString(Console.ReadLine() ?? "0");
+    return Convert.ToChar(Console.ReadLine() ?? "0");
 }
 
 // калькулятор
-double Calculator(int numA, int numB, string sign) 
+double Calculator(int numA, char sign, int numB) 
 {
-  if (sign == "+") return numA + numB;
-  if (sign == "-") return numA - numB;
-  if (sign == "*") return numA * numB;
-  if (sign == "/") return numA / numB;
-  if (sign == "^") return ExponentNum(numA, numB);
+  if (sign == '+') return numA + numB;
+  if (sign == '-') return numA - numB;
+  if (sign == '*') return numA * numB;
+  if (sign == '/' && numB != 0) return numA / numB;
+  if (sign == '^') return ExponentNum(numA, numB);
 }
 
 // метод возводит число A в натуральную степень B
@@ -44,9 +44,9 @@ void PrintData(string msg)
 }
 
 int numberA = ReadData("Введите число A: ");
-string sign = ReadSign("Введите действие (+, -, /, *, ^): ");
+char sign = ReadSign("Введите действие (+, -, /, *, ^): ");
 int numberB = ReadData("Введите число B: ");
-double res = Calculator(numberA, numberB, sign);
+double res = Calculator(numberA, sign, numberB);
 PrintData($"{numberA} {sign} {numberB} = {res}");
 
 
