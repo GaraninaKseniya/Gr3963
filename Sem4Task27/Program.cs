@@ -27,7 +27,7 @@ long SumDigitsStr(long num)
   long sum = 0;
   for (int i = 0; i < array.Length; i++)
   {
-    sum = sum + array[i];
+    sum = sum + (array[i]-48);
   }
   return sum;
 }
