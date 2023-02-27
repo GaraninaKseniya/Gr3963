@@ -11,11 +11,11 @@ long ReadData(string msg)
 // метод подсчитывает сумму цифр в числе
 long SumDigits(long num)
 {
-  long sum = num % 10;
+  long sum = 0;
   while (num > 0)
   {
-    num = num / 10;
     sum += num % 10;
+    num = num / 10;
   }
   return sum;
 }
