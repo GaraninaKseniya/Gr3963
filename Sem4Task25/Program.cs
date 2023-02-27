@@ -17,13 +17,13 @@ string ReadSign(string msg)
 }
 
 // калькулятор
-long Calculator(int numA, int numB, string sign)
+double Calculator(int numA, int numB, string sign) 
 {
   if (sign == "+") return numA + numB;
   if (sign == "-") return numA - numB;
   if (sign == "*") return numA * numB;
   if (sign == "/") return numA / numB;
-  if (sign == "степень") return ExponentNum(numA, numB);
+  if (sign == "^") return ExponentNum(numA, numB);
 }
 
 // метод возводит число A в натуральную степень B
@@ -44,9 +44,9 @@ void PrintData(string msg)
 }
 
 int numberA = ReadData("Введите число A: ");
+string sign = ReadSign("Введите действие (+, -, /, *, ^): ");
 int numberB = ReadData("Введите число B: ");
-string sign = ReadSign("Введите действие (+, -, /, *, степень): ");
-long res = Calculator(numberA, numberB, sign);
+double res = Calculator(numberA, numberB, sign);
 PrintData($"{numberA} {sign} {numberB} = {res}");
 
 
