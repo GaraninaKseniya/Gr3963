@@ -3,30 +3,27 @@
 // и возводит число A в натуральную степень B. 
 // * Написать калькулятор с операциями +, -, /, * и возведение в степень. 
 
-// метод читает данные от пользователя
+// метод читает данные от пользователя (число)
 int ReadData(string msg)
 {
   Console.WriteLine(msg);
   return int.Parse(Console.ReadLine() ?? "0");
 }
+// метод читает данные от пользователя (символ)
+string ReadSign(string msg)
+{
+    Console.WriteLine(msg);
+    return Convert.ToString(Console.ReadLine() ?? "0");
+}
 
 // калькулятор
 long Calculator(int numA, int numB, string sign)
 {
-  if (sign == "+" || sign == "-")
-  {
-    long res = 0;
-    if (sign == "+") res = numA + numB;
-    if (sign == "-") res = numA - numB;
-  }
-  else
-  {
-    long res = 1;
-    if (sign == "*") res = numA * numB;
-    if (sign == "/") res = numA / numB;
-    if (sign == "степень") res = ExponentNum(numA, numB);
-  }
-  return res;
+  if (sign == "+") return numA + numB;
+  if (sign == "-") return numA - numB;
+  if (sign == "*") return numA * numB;
+  if (sign == "/") return numA / numB;
+  if (sign == "степень") return ExponentNum(numA, numB);
 }
 
 // метод возводит число A в натуральную степень B
@@ -48,7 +45,7 @@ void PrintData(string msg)
 
 int numberA = ReadData("Введите число A: ");
 int numberB = ReadData("Введите число B: ");
-string sign = ReadData("Введите действие (+, -, /, *, степень): ");
+string sign = ReadSign("Введите действие (+, -, /, *, степень): ");
 long res = Calculator(numberA, numberB, sign);
 PrintData($"{numberA} {sign} {numberB} = {res}");
 
