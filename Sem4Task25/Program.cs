@@ -22,7 +22,7 @@ double Calculator(int numA, char sign, int numB)
   if (sign == '+') return numA + numB;
   if (sign == '-') return numA - numB;
   if (sign == '*') return numA * numB;
-  if (sign == '/' && numB != 0) return numA / numB;
+  if (sign == '/' && numB != 0) return (double)numA / numB;
   if (sign == '^') return ExponentNum(numA, numB);
   else return 0;
 }
