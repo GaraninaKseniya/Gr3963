@@ -3,6 +3,7 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве. 
 // * Отсортировать массив методом пузырька 
 // ** Отсортировать массив методом подсчета
+// *** Отсортировать массив методом вставки
 
 // метод генерирует одномерный массив
 int[] Gen1DArr(int len, int min, int max)
@@ -93,8 +94,34 @@ static int[] BasicCountingSort(int[] array, int max)
   return array;
 }
 
+// метод обмена элементов
+static void Swap(ref int e1, ref int e2)
+{
+  var temp = e1;
+  e1 = e2;
+  e2 = temp;
+}
+
+// метод сортировки массива вставками
+static int[] InsertionSort(int[] array)
+{
+  for (var i = 1; i < array.Length; i++)
+  {
+    var key = array[i];
+    var j = i;
+    while ((j > 1) && (array[j - 1] > key))
+    {
+      Swap(ref array[j - 1], ref array[j]);
+      j--;
+    }
+    array[j] = key;
+  }
+  return array;
+}
+
 int[] testArr = Gen1DArr(20, 100, 999);
 Print1DArr(testArr);
 PrintData("Количество чётных чисел в массиве: ", CountEvenNum(testArr));
 Print1DArr(BubbleSort(testArr));
 Print1DArr(BasicCountingSort(testArr, 999));
+Print1DArr(InsertionSort(testArr));
