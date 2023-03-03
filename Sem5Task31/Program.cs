@@ -33,32 +33,26 @@ void Print1DArr(int[] arr)
 }
 
 // метод подсчитывает сумму положительных и отрицательных чисел
-(int posit, int negot) NegPosSum(int[] arr)
+(int pos, int neg) NegPosSum(int[] arr)
 {
   int posSum = 0;
   int negSum = 0;
   for (int i = 0; i < arr.Length; i++)
   {
-    if (arr[i] > 0)
-    {
-      posSum += i;
-    }
-    else
-    {
-      negSum += i;
-    }
+    if (arr[i] > 0) posSum += arr[i];
+    if (arr[i] < 0) negSum += arr[i];
   }
   return (posSum, negSum);
 }
 
 // метод выводит ответ пользователю
-void PrintData(string msg, int value)
+void PrintData(string msg)
 {
-  Console.WriteLine(msg + value);
+  Console.WriteLine(msg);
 }
 
-int[] testArr = Gen1DArr(12, -9, 9);
-Print1DArr(Gen1DArr(12, -9, 9));
+int[] testArr = Gen1DArr(10, -9, 9);
+Print1DArr(testArr);
 (int posit, int negot) results = NegPosSum(testArr);
-PrintData("Сумма положительных чисел равна: ", results.posit);
-PrintData("Сумма отрицательных чисел равна: ", results.negot);
+PrintData($"Сумма положительных чисел равна:{results.posit}");
+PrintData($"Сумма отрицательных чисел равна:{results.negot}");
