@@ -2,6 +2,7 @@
 // Задайте массив заполненный случайными положительными трёхзначными числами. 
 // Напишите программу, которая покажет количество чётных чисел в массиве. 
 // * Отсортировать массив методом пузырька 
+// ** Отсортировать массив методом подсчета
 
 // метод генерирует одномерный массив
 int[] Gen1DArr(int len, int min, int max)
@@ -72,7 +73,28 @@ static int[] BubbleSort(int[] mas)
   return mas;
 }
 
+// метод сортировки массива подсчетом
+static int[] BasicCountingSort(int[] array, int max)
+{
+  var count = new int[max + 1];
+  for (var i = 0; i < array.Length; i++)
+  {
+    count[array[i]]++;
+  }
+  var index = 0;
+  for (var i = 0; i < count.Length; i++)
+  {
+    for (var j = 0; j < count[i]; j++)
+    {
+      array[index] = i;
+      index++;
+    }
+  }
+  return array;
+}
+
 int[] testArr = Gen1DArr(20, 100, 999);
 Print1DArr(testArr);
-Print1DArr(BubbleSort(testArr));
 PrintData("Количество чётных чисел в массиве: ", CountEvenNum(testArr));
+Print1DArr(BubbleSort(testArr));
+Print1DArr(BasicCountingSort(testArr, 999));
