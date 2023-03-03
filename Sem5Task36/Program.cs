@@ -1,6 +1,7 @@
 ﻿// Задача №36 
 // Задайте одномерный массив, заполненный случайными числами. 
 // Найдите сумму элементов, стоящих на нечётных позициях. 
+// * Найдите все пары в массиве и выведите пользователю 
 
 // метод генерирует одномерный массив
 int[] Gen1DArr(int len, int min, int max)
@@ -49,7 +50,24 @@ void PrintData(string msg, int value)
   Console.WriteLine(msg + value);
 }
 
+// метод нахождения всех пар в массиве и выведение их пользователю 
+void PairElem(int[] arr)
+{
+  for (int i = 0; i < arr.Length - 1; i++)
+  {
+    for (int j = i + 1; j < arr.Length - 2; j++)
+    {
+      if (arr[i] == arr[j])
+      {
+        Console.WriteLine($"Элементы: {arr[i]} = {arr[j]}, индексы элементов {i}, {j}");
+        break;
+      }
+    }
+  }
+}
+
 int[] testArr = Gen1DArr(15, -10, 10);
 Print1DArr(testArr);
 int result = sumOddPosition(testArr);
 PrintData("Сумма элементов, стоящих на нечётных позициях, равна: ", result);
+PairElem(testArr);
