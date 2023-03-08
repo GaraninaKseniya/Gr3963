@@ -26,5 +26,14 @@ void PrintData(string msg)
   Console.WriteLine(msg);
 }
 
+// встроенный метод преобразования числа
+string DecToBinNativ(int num, int baseI)
+{
+  return Convert.ToString(num, baseI);
+}
+
 int number = ReadData("Введите десятичное число: ");
 PrintData($"Преобразование в двоичное число : {DecToBin(number)}");
+PrintData($"Число в двоичной системе : {DecToBinNativ(number, 2)}");
+PrintData($"Число в 8-ричной системе : {DecToBinNativ(number, 8)}");
+PrintData($"Число в 16-ричной системе : {DecToBinNativ(number, 16)}");
