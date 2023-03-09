@@ -44,19 +44,3 @@ int[] testArr = Gen1DArr(40, 1, 50);
 Print1DArr(testArr);
 int[] testArrNew = CopyArrayStandartTools(testArr);
 Print1DArr(testArrNew);
-
-// // метод читает данные от пользователя
-// int ReadData(string msg)
-// {
-//   Console.WriteLine(msg);
-//   return int.Parse(Console.ReadLine() ?? "0");
-// }
-
-// // метод выводит ответ пользователю
-// void PrintData(string msg)
-// {
-//   Console.WriteLine(msg);
-// }
-
-// int number = ReadData("Введите десятичное число: ");
-// PrintData($"Преобразование в двоичное число : {DecToBin(number)}");
