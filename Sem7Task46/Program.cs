@@ -43,7 +43,7 @@ void Print2DArr(int[,] arr)
     for (int j = 0; j < arr.GetLength(1); j++)
     {
       Console.ForegroundColor = col[new Random().Next(0,16)]; // цветная печать
-      Console.Write($"{arr[i, j]} ");
+      Console.Write($"{arr[i, j]}\t");
       Console.ResetColor(); // цветная печать
     }
     Console.WriteLine();
