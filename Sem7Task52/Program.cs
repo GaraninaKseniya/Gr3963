@@ -43,9 +43,10 @@ double[] ColumnMean(int[,] arr)
   {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
-      resArr[j] += arr[j, j];
+      resArr[j] += arr[i, j];
     }
     resArr[j] = resArr[j] / arr.GetLength(0);
+    resArr[j] =Math.Round(resArr[j],1);
   }
   return resArr;
 }
@@ -55,11 +56,11 @@ void Print1DArr(double[] resArr)
 {
   for (int i = 0; i < resArr.Length; i++)
   {
-    Console.Write(resArr[i] + ",\t");
+    Console.Write(resArr[i] + "\t");
   }
 }
 
-int[,] testArr = Gen2DArr(3, 3, 1, 10);
+int[,] testArr = Gen2DArr(5, 5, 1, 10);
 Print2DArr(testArr);
 Console.WriteLine();
 Print1DArr(ColumnMean(testArr));
