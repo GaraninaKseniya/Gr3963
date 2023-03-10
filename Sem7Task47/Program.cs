@@ -17,7 +17,7 @@ double[,] Gen2DArr(int countRow, int countColumn, int min, int max)
     for (int j = 0; j < countColumn; j++)
     {
       arr[i, j] = new Random().Next(min, max + 1)+(new Random().NextDouble());
-      arr[i, j] =Math.Round(arr[i,j],1);
+      arr[i, j] =Math.Round(arr[i,j],2);
     }
   }
   return arr;
