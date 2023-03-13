@@ -43,33 +43,6 @@ void Print3DArr(int[,,] arr)
   }
 }
 
-// // метод, который будет находить строку в двумерном массиве с наименьшей суммой элементов
-// int minRowCount(int[,] arr)
-// {
-//   int index = -1;
-//   int min = int.MaxValue;
-//   for (int i = 0; i < arr.GetLength(0); i++)
-//   {
-//     int sum = 0;
-//     for (int j = 0; j < arr.GetLength(1); j++)
-//     {
-//       sum = sum + arr[i, j];
-//     }
-//     if (sum < min)
-//     {
-//       min = sum;
-//       index = i;
-//     }
-//   }
-//   return index;
-// }
-
-// // метод выводит ответ пользователю
-// void PrintData(string msg)
-// {
-//   Console.WriteLine(msg);
-// }
-
 int[,,] testArr = new int[2, 2, 2];
 Gen3DArr(testArr, 10, 100);
 Print3DArr(testArr);
