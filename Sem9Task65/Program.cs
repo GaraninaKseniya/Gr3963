@@ -32,5 +32,5 @@ void PrintData(string msg)
 
 int numberM = ReadData("Введите число M:");
 int numberN = ReadData("Введите число N:");
-string resultLine = RecMN(numberM, numberN);
+string resultLine = numberM < numberN ? RecMN(numberM, numberN) : RecMN(numberN, numberM);
 PrintData(resultLine);
