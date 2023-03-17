@@ -12,9 +12,8 @@ int ReadData(string msg)
 // метод выводит сумму натуральных элементов в промежутке с помощью рекурсии
 int RecSumElem(int m, int n)
 {
-  int res = 0;
-  if (m >= n) return res = n;
-  else return res + m + RecSumElem(m + 1, n);
+  if (m >= n) return n;
+  else return m + RecSumElem(m + 1, n);
 }
 
 // метод выводит ответ пользователю
